@@ -1,0 +1,6 @@
+@rpsfullstack_HostAddress = http://localhost:5041
+
+GET {{rpsfullstack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
