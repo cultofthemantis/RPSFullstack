@@ -33,7 +33,7 @@ async function playGame(move) {
   }
 
   const response = await fetch(
-    `http://localhost:5041/api/RpsLS/CPU?userMove=${move}`,
+    `https://rpsfullstack-egf3dpapfqena4f7.westus3-01.azurewebsites.net/api/RpsLS/CPU?userMove=${move}`,
   );
   const result = await response.text();
   console.log(response);
@@ -49,9 +49,7 @@ async function PVP(move) {
     return;
   }
 
-  const response = await fetch(
-    `http://localhost:5041/api/RpsLS/pvp?player1Move=${player1Move}&player2Move=${move}`,
-  );
+  const response = await fetch(`https://rpsfullstack-egf3dpapfqena4f7.westus3-01.azurewebsites.net/api/RpsLS/pvp?player1Move=${player1Move}&player2Move=${move}`,);
   const result = await response.text();
 
   resultEl.textContent = result;
